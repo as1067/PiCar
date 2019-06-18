@@ -5,7 +5,7 @@ cur_speed = 0
 # init
 def init(default_speed=50):
     global ser
-    ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+    ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
     stop()
     set_speed(default_speed)
     print ("actuator-arduino init completed.")
