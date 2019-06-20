@@ -8,14 +8,14 @@ from collections import OrderedDict
 # camera module selection
 #   "camera-webcam" "camera-null"
 ##########################################################
-camera="camera-webcam"
+camera="camerapicamera"
 
 ##########################################################
 # actuator selection
 #   "actuator-drv8835", "actuator-adafruit_hat"
 #   "actuator-null"
 ##########################################################
-actuator="actuator-drv8835"
+actuator="actuator-arduino"
 
 ##########################################################
 # model selection

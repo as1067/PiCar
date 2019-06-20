@@ -2,23 +2,22 @@
 import os
 import time
 import atexit
-import cv2
 import math
 import numpy as np
 import sys
 import params
 import argparse
-
-import Image
-import ImageDraw
+import cv2
+from PIL import Image,ImageDraw
 import local_common as cm
-
+from camerapicamera import VideoStream
 import input_kbd
+from supervisedDriving import Driver
 
 ##########################################################
 # import deeppicar's sensor/actuator modules
 ##########################################################
-camera   = __import__(params.camera)
+camera = VideoStream()
 actuator = __import__(params.actuator)
 
 ##########################################################
@@ -36,17 +35,13 @@ cfg_throttle = 50 # 50% power.
 NCPU = 2
 
 frame_id = 0
-angle = 0.0
+angle = 0
 btn   = ord('k') # center
 period = 0.05 # sec (=50ms)
-
+driver = Driver()
 ##########################################################
 # local functions
 ##########################################################
-def deg2rad(deg):
-    return deg * math.pi / 180.0
-def rad2deg(rad):
-    return 180.0 * rad / math.pi
 
 def g_tick():
     t = time.time()
@@ -71,6 +66,8 @@ parser.add_argument("-d", "--dnn", help="Enable DNN", action="store_true")
 parser.add_argument("-t", "--throttle", help="throttle percent. [0-100]%", type=int)
 parser.add_argument("-n", "--ncpu", help="number of cores to use.", type=int)
 parser.add_argument("-f", "--fpvvideo", help="Take FPV video of DNN driving", action="store_true")
+parser.add_argument("-g", "--guide", help="Guided driving", action="store_true")
+
 args = parser.parse_args()
 
 if args.dnn:
@@ -83,6 +80,8 @@ if args.ncpu > 0:
     NCPU = args.ncpu
 if args.fpvvideo:
     fpv_video = True
+if args.guide:
+    guided = True
 
 # create files for data recording
 keyfile = open('out-key.csv', 'w+')
@@ -99,7 +98,6 @@ vidfile = cv2.VideoWriter('out-video.avi', fourcc,
 
 # initlaize deeppicar modules
 actuator.init(cfg_throttle)
-camera.init(res=cfg_cam_res, fps=cfg_cam_fps, threading=use_thread)
 atexit.register(turn_off)
 
 # initilize dnn model
@@ -146,40 +144,10 @@ while True:
     else:
         ch = ord(input_kbd.read_single_keypress())
 
-    if ch == ord('j'):
-        actuator.left()
-        print ("left")
-        angle = deg2rad(-30)
-        btn   = ord('j')
-    elif ch == ord('k'):
-        actuator.center()
-        print ("center")
-        angle = deg2rad(0)
-        btn   = ord('k')
-    elif ch == ord('l'):
-        actuator.right()
-        print ("right")
-        angle = deg2rad(30)
-        btn   = ord('l')
-    elif ch == ord('a'):
-        actuator.ffw()
-        print ("accel")
-    elif ch == ord('s'):
-        actuator.stop()
-        print ("stop")
-        btn   = ch
-    elif ch == ord('z'):
-        actuator.rew()
-        print ("reverse")
-    elif ch == ord('q'):
-        break
-    elif ch == ord('r'):
-        print ("toggle record mode")
-        if rec_start_time == 0:
-            rec_start_time = ts
-        else:
-            rec_start_time = 0
-    elif ch == ord('t'):
+    if guided:
+        angle = driver.getAngle()
+    
+    if ch == ord('t'):
         print ("toggle video mode")
         if view_video == False:
             view_video = True
@@ -196,21 +164,11 @@ while True:
         # 1. machine input
         img = preprocess.preprocess(frame)
         angle = model.y.eval(feed_dict={model.x: [img]})[0][0]
-        car_angle = 0
 
-        degree = rad2deg(angle)
-        if degree < 15 and degree > -15:
+        if angle>120 and angle<130:
             actuator.center()
-            car_angle = 0
-            btn = ord('k')
-        elif degree >= 15:
-            actuator.right()
-            car_angle = 30
-            btn = ord('l')
-        elif degree <= -15:
-            actuator.left()
-            car_angle = -30
-            btn = ord('j')
+        else:
+            actuator.set_angle(angle)
 
     dur = time.time() - ts
     if dur > period:
@@ -237,7 +195,7 @@ while True:
             newImage = Image.new('RGBA', (100, 20), bgColor)
             drawer = ImageDraw.Draw(newImage)
             drawer.text((0, 0), "Frame #{}".format(frame_id), fill=textColor)
-            drawer.text((0, 10), "Angle:{}".format(car_angle), fill=textColor)
+            drawer.text((0, 10), "Angle:{}".format(angle), fill=textColor)
             newImage = cv2.cvtColor(np.array(newImage), cv2.COLOR_BGR2RGBA)
             frame = cm.overlay_image(frame,
                                      newImage,
