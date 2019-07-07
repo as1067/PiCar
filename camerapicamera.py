@@ -31,6 +31,7 @@ class VideoStream:
  
 	def read(self):
 		# return the current frame
+		print("reading frame")
 		return self.stream.read()
  
 	def stop(self):

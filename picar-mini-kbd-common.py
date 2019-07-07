@@ -67,6 +67,7 @@ parser.add_argument("-t", "--throttle", help="throttle percent. [0-100]%", type=
 parser.add_argument("-n", "--ncpu", help="number of cores to use.", type=int)
 parser.add_argument("-f", "--fpvvideo", help="Take FPV video of DNN driving", action="store_true")
 parser.add_argument("-g", "--guide", help="Guided driving", action="store_true")
+parser.add_argument("-f", "--video",action="store true")
 
 args = parser.parse_args()
 
@@ -82,6 +83,8 @@ if args.fpvvideo:
     fpv_video = True
 if args.guide:
     guided = True
+if args.video:
+    view_video = True
 
 # create files for data recording
 keyfile = open('out-key.csv', 'w+')
