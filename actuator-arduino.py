@@ -11,7 +11,7 @@ def init(default_speed=50):
     print ("actuator-arduino init completed.")
 
 def set_speed(speed):
-    ser.write("t" + str(speed)+"\n")
+    ser.write(bytes("t" + str(speed)+"\n","utf-8"))
     cur_speed = speed
     
 def get_speed():
@@ -24,9 +24,9 @@ def get_angle():
     return angle
 # steering
 def center():
-    ser.write("s125\n")    
+    ser.write(bytes("s125\n","utf-8"))
 def set_angle(a):
-    ser.write("s"+str(a)+"\n")  
+    ser.write(bytes("s"+str(a)+"\n","utf-8"))
     angle = a
 
 # exit    
