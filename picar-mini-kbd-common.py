@@ -135,7 +135,6 @@ angle_arr = []
 while True:
     if use_thread:
         time.sleep(next(g))
-    camera.update()
     frame = camera.read()
     ts = time.time()
 
@@ -212,6 +211,8 @@ while True:
             break
         print ("%.3f %d %.3f %d %d(ms)" %
            (ts, frame_id, angle, btn, int((time.time() - ts)*1000)))
+    camera.update()
+
 
 print ("Finish..")
 turn_off()
