@@ -128,13 +128,14 @@ if use_dnn == True:
 
 g = g_tick()
 start_ts = time.time()
-
+camera.start()
 frame_arr = []
 angle_arr = []
 # enter main loop
 while True:
     if use_thread:
         time.sleep(next(g))
+    camera.update()
     frame = camera.read()
     ts = time.time()
 
