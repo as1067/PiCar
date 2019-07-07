@@ -8,6 +8,7 @@ class Driver():
         waiting = True
         while waiting:
             speed = self.ser.readline()
+            angle = angle.decode("utf-8")
             if speed[0] == "t":
                 waiting = False
                 return int(speed[1:])
@@ -16,6 +17,7 @@ class Driver():
         waiting = True
         while waiting:
             angle = self.ser.readline()
+            angle = angle.decode("utf-8")
             if angle[0] == "s":
                 waiting = False
                 return int(angle[1:])
