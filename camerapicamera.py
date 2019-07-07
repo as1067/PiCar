@@ -32,7 +32,7 @@ class VideoStream:
 	def read(self):
 		# return the current frame
 		frame = self.stream.read()
-		print(frame)
+		# print(frame)
 		return frame
  
 	def stop(self):

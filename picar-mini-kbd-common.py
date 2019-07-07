@@ -211,7 +211,7 @@ while True:
             break
         print ("%.3f %d %.3f %d %d(ms)" %
            (ts, frame_id, angle, btn, int((time.time() - ts)*1000)))
-    camera.update()
+    # camera.update()
 
 
 print ("Finish..")
