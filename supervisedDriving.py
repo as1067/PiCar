@@ -19,6 +19,6 @@ class Driver():
             angle = self.ser.readline()
             angle = angle.decode("utf-8")
             print(angle)
-            if angle[0] == "s":
+            if angle[0] == "s" and int(angle[1:])<=250 and int(angle[1:])>=0
                 waiting = False
                 return int(angle[1:])
