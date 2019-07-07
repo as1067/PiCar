@@ -31,8 +31,9 @@ class VideoStream:
  
 	def read(self):
 		# return the current frame
-		print("reading frame")
-		return self.stream.read()
+		frame = self.stream.read()
+		print(frame)
+		return frame
  
 	def stop(self):
 		# stop the thread and release any resources
