@@ -132,7 +132,7 @@ angle_arr = []
 while True:
     if use_thread:
         time.sleep(next(g))
-    frame = camera.read_frame()
+    frame = camera.read()
     ts = time.time()
 
     # read a frame
