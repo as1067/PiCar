@@ -125,10 +125,10 @@ if use_dnn == True:
 
 # null_frame = np.zeros((cfg_cam_res[0],cfg_cam_res[1],3), np.uint8)
 # cv2.imshow('frame', null_frame)
-
+camera.start()
+time.sleep(2)
 g = g_tick()
 start_ts = time.time()
-camera.start()
 frame_arr = []
 angle_arr = []
 # enter main loop
