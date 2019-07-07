@@ -37,7 +37,7 @@ NCPU = 2
 frame_id = 0
 angle = 0
 btn   = ord('k') # center
-period = 0.05 # sec (=50ms)
+period = 0.2 # sec (=50ms)
 driver = Driver()
 ##########################################################
 # local functions
@@ -91,7 +91,7 @@ keyfile = open('out-key.csv', 'w+')
 keyfile_btn = open('out-key-btn.csv', 'w+')
 keyfile.write("ts_micro,frame,wheel\n")
 keyfile_btn.write("ts_micro,frame,btn,speed\n")
-rec_start_time = 0
+rec_start_time = 1
 try:
     fourcc = cv2.cv.CV_FOURCC(*'XVID')
 except AttributeError as e:
