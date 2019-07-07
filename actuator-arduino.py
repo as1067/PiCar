@@ -18,7 +18,7 @@ def get_speed():
     return cur_speed
 
 def stop():
-    ser.write("t90\n")
+    ser.write(bytes("t90\n","utf-8"))
               
 def get_angle():
     return angle
