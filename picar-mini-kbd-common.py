@@ -181,6 +181,7 @@ while True:
         print("%.3f: took %d ms" % (ts - start_ts, int(dur * 1000)))
 
     if rec_start_time > 0 and not frame is None:
+        print("recording")
         # increase frame_id
         frame_id += 1
 
