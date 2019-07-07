@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/camera-webcam.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera-webcam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camerapicamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/camerapicamera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/picar-mini-kbd-common.py" beforeDir="false" afterPath="$PROJECT_DIR$/picar-mini-kbd-common.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="426">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#18#27#0" expanded="true" />
               </folding>
@@ -148,12 +146,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562537579111</updated>
-      <workItem from="1562537584956" duration="3658000" />
+      <workItem from="1562537584956" duration="3773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3658000" />
+    <option name="totallyTimeSpent" value="3773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -205,6 +203,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/actuator-arduino.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -219,13 +220,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        <state relative-caret-position="426">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#18#27#0" expanded="true" />
           </folding>

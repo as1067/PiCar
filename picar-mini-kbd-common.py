@@ -67,7 +67,7 @@ parser.add_argument("-t", "--throttle", help="throttle percent. [0-100]%", type=
 parser.add_argument("-n", "--ncpu", help="number of cores to use.", type=int)
 parser.add_argument("-f", "--fpvvideo", help="Take FPV video of DNN driving", action="store_true")
 parser.add_argument("-g", "--guide", help="Guided driving", action="store_true")
-parser.add_argument("-v", "--video",action="store true")
+parser.add_argument("-v", "--video",action="store_true")
 
 args = parser.parse_args()
 
