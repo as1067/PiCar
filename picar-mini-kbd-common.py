@@ -96,7 +96,9 @@ try:
     fourcc = cv2.cv.CV_FOURCC(*'XVID')
 except AttributeError as e:
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-vidfile = cv2.VideoWriter('out-video.avi', fourcc,
+f = open("latest_name.txt","r")
+latest = f.read()
+vidfile = cv2.VideoWriter("out-video_"+latest+".avi", fourcc,
                           cfg_cam_fps, cfg_cam_res)
 
 # initlaize deeppicar modules
