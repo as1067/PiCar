@@ -14,7 +14,7 @@ while success:
     success, image = vidcap.read()
     if success:
         # print(image)
-        cv2.resize(image,(60,80))
+        image = cv2.resize(image,(60,80))
         image = np.true_divide(image,255)
         images.append(image)
 images = np.asarray(images)
