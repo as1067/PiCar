@@ -86,9 +86,11 @@ if args.guide:
 if args.video:
     view_video = True
 
+f = open("latest_name.txt","r")
+latest = f.read()
 # create files for data recording
-keyfile = open('out-key.csv', 'w+')
-keyfile_btn = open('out-key-btn.csv', 'w+')
+keyfile = open('out-key_'+latest+'.csv', 'w+')
+keyfile_btn = open('out-key-btn_1'+'.csv', 'w+')
 keyfile.write("ts_micro,frame,wheel\n")
 keyfile_btn.write("ts_micro,frame,btn,speed\n")
 rec_start_time = 1
@@ -96,8 +98,6 @@ try:
     fourcc = cv2.cv.CV_FOURCC(*'XVID')
 except AttributeError as e:
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-f = open("latest_name.txt","r")
-latest = f.read()
 vidfile = cv2.VideoWriter("out-video_"+latest+".avi", fourcc,
                           cfg_cam_fps, cfg_cam_res)
 
