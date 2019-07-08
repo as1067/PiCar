@@ -37,7 +37,7 @@ NCPU = 2
 frame_id = 0
 angle = 0
 btn   = ord('k') # center
-period = 0.025 # sec (=50ms)
+period = 0.033 # sec (=50ms)
 driver = Driver()
 ##########################################################
 # local functions
