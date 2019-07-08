@@ -28,7 +28,7 @@ with open("epochs/out-key_1.csv") as steer:
 steering = np.asarray(steering)
 
 #Neural Network Setup
-batch_size = 50
+batch_size = 5
 dropout = .4
 model = Sequential()
 model.add(l.Conv2D(1024,activation="relu",kernel_size=(5,5),input_shape=(240,320,3),data_format="channels_last"))
