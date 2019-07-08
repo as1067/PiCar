@@ -37,7 +37,7 @@ NCPU = 2
 frame_id = 0
 angle = 0
 btn   = ord('k') # center
-period = 0.033 # sec (=50ms)
+period = 0.025 # sec (=50ms)
 driver = Driver()
 ##########################################################
 # local functions
@@ -206,7 +206,7 @@ while True:
                                      x_offset = 0, y_offset = 0)
         # write video stream
         vidfile.write(frame)
-        if frame_id >= 1000:
+        if frame_id >= 100000:
             print ("recorded 1000 frames")
             break
         print ("%.3f %d %.3f %d %d(ms)" %
