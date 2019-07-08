@@ -4,8 +4,8 @@ import os
 import sys
 import params
 
-vid_path = "out-video.avi"
-csv_path = "out-key.csv"
+vid_path = "out-video_1.avi"
+csv_path = "out-key_1.csv"
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
@@ -17,7 +17,7 @@ elif len(sys.argv) == 2:
     vid_path = params.data_dir + '/out-video-{}.avi'.format(epoch_id)
     csv_path = params.data_dir + '/out-key-{}.csv'.format(epoch_id)
 
-print params.data_dir, vid_path
+print(params.data_dir, vid_path)
 assert os.path.isfile(vid_path)
 assert os.path.isfile(csv_path)
 

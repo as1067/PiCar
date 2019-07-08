@@ -26,7 +26,7 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(loss)
 saver = tf.train.Saver()
 
 model_load_path = cm.jn(params.save_dir, params.model_load_file)
-print model_load_path
+print(model_load_path)
 if os.path.exists(model_load_path + ".index"):
     print ("Loading initial weights from %s" % model_load_path)
     saver.restore(sess, model_load_path)
@@ -54,7 +54,7 @@ if params.shuffle_training:
 # center, curve 50:50%
 data.categorize_imgs()
 
-for i in xrange(params.training_steps):
+for i in range(params.training_steps):
     if params.use_category_normal:
         txx, tyy = data.load_batch_category_normal('train')
     else:
@@ -75,7 +75,7 @@ for i in xrange(params.training_steps):
 
         t_loss = loss.eval(feed_dict={model.x: txx, model.y_: tyy})
         v_loss = loss.eval(feed_dict={model.x: vxx, model.y_: vyy})
-        print "step {} of {}, train loss {}, val loss {}".format(i+1, params.training_steps, t_loss, v_loss)
+        print("step {} of {}, train loss {}, val loss {}".format(i+1, params.training_steps, t_loss, v_loss))
 
     if (i+1) % 100 == 0:
         if not os.path.exists(params.save_dir):
@@ -85,4 +85,4 @@ for i in xrange(params.training_steps):
 
         time_passed = cm.pretty_running_time(time_start)
         time_left = cm.pretty_time_left(time_start, i, params.training_steps)
-        print 'Model saved. Time passed: {}. Time left: {}'.format(time_passed, time_left)
+        print('Model saved. Time passed: {}. Time left: {}'.format(time_passed, time_left))

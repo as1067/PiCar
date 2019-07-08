@@ -326,6 +326,27 @@ def cv2_resize_by_height(img, height):
     height, width = int(round(height)), int(round(width))
     return cv2.resize(img, (width, height))
 
+
+def count_frames_manual(video):
+    # initialize the total number of frames read
+    total = 0
+
+    # loop over the frames of the video
+    while True:
+        # grab the current frame
+        (grabbed, frame) = video.read()
+
+        # check to see if we have reached the end of the
+        # video
+        if not grabbed:
+            break
+
+        # increment the total number of frames read
+        total += 1
+
+    # return the total number of frames in the video file
+    return total
+
 def frame_count(path, method='ffmpeg'):
     if method == 'ffmpeg':
         return ffmpeg_frame_count(path)

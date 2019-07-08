@@ -88,7 +88,7 @@ def load_imgs():
             print ('processing and loading "{}" epoch {} into memory, current num of imgs is {}...'.format(p, epoch_id, len(imgs[p])))
 
             # vid_path = cm.jn(data_dir, 'epoch{:0>2}_front.mkv'.format(epoch_id))
-            vid_path = cm.jn(data_dir, 'out-video-{}.avi'.format(epoch_id))
+            vid_path = cm.jn(data_dir, 'out-video_1.avi'.format(epoch_id))
 
             assert os.path.isfile(vid_path)
 

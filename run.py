@@ -34,7 +34,7 @@ saver.restore(sess, model_load_path)
 epoch_ids = sorted(list(set(itertools.chain(*params.epochs.values()))))
 
 def process_epoch(epoch_id):
-    print '---------- processing video for epoch {} ----------'.format(epoch_id)
+    print('---------- processing video for epoch {} ----------').format(epoch_id)
     vid_path = cm.jn(params.data_dir, 'out-video-{}.avi'.format(epoch_id))
     frame_count = cm.frame_count(vid_path)        
     
@@ -49,9 +49,9 @@ def process_epoch(epoch_id):
 
     machine_steering = []
 
-    print 'performing inference...'
+    print('performing inference...')
     time_start = time.time()
-    for frame_id in xrange(frame_count):
+    for frame_id in range(frame_count):
         ret, img = cap.read()
         assert ret
 
@@ -88,7 +88,7 @@ for epoch_id in epoch_ids:
     steering = process_epoch(epoch_id)
     job_list.append([epoch_id, steering])
 
-print "visualize epochs in parallel"    
+print("visualize epochs in parallel")
 num_cores = int(multiprocessing.cpu_count()/2)
 Parallel (n_jobs = num_cores) (delayed (visualize_epoch) (job) for job in job_list)
 
