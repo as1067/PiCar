@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epochs/out-key-btn_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epochs/out-key_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epochs/out-video_1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PiCar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PiCar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_shuffled.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_shuffled.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/local_common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view-video.py" beforeDir="false" afterPath="$PROJECT_DIR$/view-video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_keras.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="261">
+              <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -59,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkpoint/placeholder.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -172,11 +161,6 @@
             <path>
               <item name="PiCar" type="b2602c69:ProjectViewProjectNode" />
               <item name="PiCar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PiCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PiCar" type="462c0819:PsiDirectoryNode" />
-              <item name="checkpoint" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PiCar" type="b2602c69:ProjectViewProjectNode" />
@@ -335,12 +319,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562537579111</updated>
-      <workItem from="1562537584956" duration="13111000" />
+      <workItem from="1562537584956" duration="13330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13111000" />
+    <option name="totallyTimeSpent" value="13330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -520,6 +504,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model-5conv_3fc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkpoint/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
@@ -530,23 +522,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model-5conv_3fc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="261">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkpoint/placeholder.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
