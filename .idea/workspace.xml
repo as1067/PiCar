@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/events.out.tfevents.1562557667.cyruss-mbp.lan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/events.out.tfevents.1562557771.cyruss-mbp.lan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/events.out.tfevents.1562557797.cyruss-mbp.lan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/events.out.tfevents.1562557851.cyruss-mbp.lan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/events.out.tfevents.1562558026.cyruss-mbp.lan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picar-mini-kbd-common.py" beforeDir="false" afterPath="$PROJECT_DIR$/picar-mini-kbd-common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latest_name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/latest_name.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +36,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
+            <state relative-caret-position="127">
               <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
               <folding>
                 <element signature="e#18#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/latest_name.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -118,6 +122,7 @@
       <find>frame</find>
       <find>data</find>
       <find>use</find>
+      <find>csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,7 +135,6 @@
         <option value="$PROJECT_DIR$/supervisedDriving.py" />
         <option value="$PROJECT_DIR$/camera-webcam.py" />
         <option value="$PROJECT_DIR$/camerapicamera.py" />
-        <option value="$PROJECT_DIR$/latest_name.txt" />
         <option value="$PROJECT_DIR$/view-video.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/train.py" />
@@ -140,6 +144,7 @@
         <option value="$PROJECT_DIR$/train_tf.py" />
         <option value="$PROJECT_DIR$/train_keras.py" />
         <option value="$PROJECT_DIR$/picar-mini-kbd-common.py" />
+        <option value="$PROJECT_DIR$/latest_name.txt" />
       </list>
     </option>
   </component>
@@ -330,12 +335,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562537579111</updated>
       <workItem from="1562537584956" duration="15425000" />
-      <workItem from="1562621910413" duration="521000" />
+      <workItem from="1562621910413" duration="659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15946000" />
+    <option name="totallyTimeSpent" value="16084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -418,13 +423,6 @@
     <entry file="file://$PROJECT_DIR$/out-key.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/latest_name.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_ordered.py">
@@ -524,11 +522,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="127">
           <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
           <folding>
             <element signature="e#18#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/latest_name.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
