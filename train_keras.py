@@ -3,6 +3,7 @@ from keras import Model,Sequential
 import keras.layers as l
 import csv
 import numpy as np
+from random import sample
 vidcap = cv2.VideoCapture("epochs/out-video_1.avi")
 from keras.optimizers import Adam
 
@@ -27,6 +28,28 @@ with open("epochs/out-key_1.csv") as steer:
             steering.append(int(row[2]))
         count+=1
 steering = np.asarray(steering)
+# ids = []
+# for i in range(5570):
+#     ids.append(i)
+# traini = sample(ids,4000)
+# vali = []
+# for i in ids:
+#     if not i in traini:
+#         vali.append(i)
+# trainx = []
+# trainy = []
+# valx = []
+# valy = []
+# for i in traini:
+#     trainx.append(images[i])
+#     trainy.append(steering[i])
+# for i in vali:
+#     valx.append(images[i])
+#     valy.append(steering[i])
+# trainx = np.asarray(trainx)
+# trainy = np.asarray(trainy)
+# valx = np.asarray(valx)
+# valy = np.asarray(valy)
 
 #Neural Network Setup
 batch_size = 2
@@ -49,7 +72,7 @@ model.compile(optimizer=Adam(),loss="mean_squared_logarithmic_error")
 
 #Neural Network Training
 print("starting training")
-model.fit(images,steering,batch_size=batch_size,epochs=10000)
+model.fit(images,steering,batch_size=batch_size,epochs=10,validation_split=.7)
 model.save("checkpoint/model_0.h5")
 
 
