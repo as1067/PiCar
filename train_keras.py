@@ -16,6 +16,7 @@ while success:
     if success:
         # print(image)
         image = cv2.resize(image,(80,60))
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         image = np.true_divide(image,255)
         images.append(image)
 images = np.asarray(images)
@@ -55,9 +56,9 @@ steering = np.asarray(steering)
 batch_size = 2
 dropout = .4
 model = Sequential()
-model.add(l.Conv2D(256,activation="relu",kernel_size=(5,5),input_shape=(60,80,3),data_format="channels_last"))
-model.add(l.Conv2D(128,activation="relu",kernel_size=(5,5),data_format="channels_last"))
-model.add(l.Conv2D(64,activation="relu",kernel_size=(5,5),data_format="channels_last"))
+model.add(l.Conv2D(256,activation="relu",kernel_size=(3,3),input_shape=(60,80,1),data_format="channels_last"))
+model.add(l.Conv2D(128,activation="relu",kernel_size=(3,3),data_format="channels_last"))
+model.add(l.Conv2D(64,activation="relu",kernel_size=(3,3),data_format="channels_last"))
 model.add(l.Flatten())
 model.add(l.Dense(100,activation="relu"))
 model.add(l.Dropout(dropout))
