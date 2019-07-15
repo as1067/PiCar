@@ -13,7 +13,6 @@ import local_common as cm
 from camerapicamera import VideoStream
 import input_kbd
 from supervisedDriving import Driver
-
 ##########################################################
 # import deeppicar's sensor/actuator modules
 ##########################################################
@@ -57,6 +56,16 @@ def turn_off():
     keyfile.close()
     keyfile_btn.close()
     vidfile.release()
+
+def auto_canny(image, sigma=0.33):
+    # compute the median of the single channel pixel intensities
+    v = np.median(image)
+
+    # apply automatic Canny edge detection using the computed median
+    lower = int(max(0, (1.0 - sigma) * v))
+    upper = int(min(255, (1.0 + sigma) * v))
+    edged = cv2.Canny(image, lower, upper,apertureSize=3)
+    return edged
 
 ##########################################################
 # program begins
@@ -107,22 +116,10 @@ atexit.register(turn_off)
 
 # initilize dnn model
 if use_dnn == True:
-    print ("Load TF")
-    import tensorflow as tf
-    model = __import__(params.model)
-    import local_common as cm
-    import preprocess
-
+    print ("Load Keras")
+    import keras
     print ("Load Model")
-    config = tf.ConfigProto(intra_op_parallelism_threads=NCPU,
-                            inter_op_parallelism_threads=NCPU, \
-                            allow_soft_placement=True,
-                            device_count = {'CPU': 1})
-
-    sess = tf.InteractiveSession(config=config)
-    saver = tf.train.Saver()
-    model_load_path = cm.jn(params.save_dir, params.model_load_file)
-    saver.restore(sess, model_load_path)
+    model = keras.models.load_model("models/model_10.h5")
     print ("Done..")
 
 # null_frame = np.zeros((cfg_cam_res[0],cfg_cam_res[1],3), np.uint8)
@@ -167,13 +164,20 @@ while True:
 
     if use_dnn == True:
         # 1. machine input
-        img = preprocess.preprocess(frame)
-        angle = model.y.eval(feed_dict={model.x: [img]})[0][0]
-
+        frame = cv2.resize(frame, (80, 60))
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        frame = np.expand_dims(frame, 2)
+        frame = auto_canny(frame)
+        image = []
+        image.append(frame)
+        image = np.asarray(image)
+        angles = model.predict(image,batch_size=1,verbose=1)
+        angle = int(angles[0])
         if angle>120 and angle<130:
             actuator.center()
         else:
             actuator.set_angle(angle)
+        actuator.set_speed(110)
 
     dur = time.time() - ts
     if dur > period:

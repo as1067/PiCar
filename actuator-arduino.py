@@ -1,7 +1,7 @@
 from serial import Serial
 angle = 125
 minturn = 5
-ser = ser = Serial('/dev/ttyUSB0', 9600, timeout=1)
+ser = Serial('/dev/ttyUSB0', 9600, timeout=1)
 cur_speed = 0
 
 # init
