@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/test_ard.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -346,12 +346,12 @@
       <workItem from="1562641945395" duration="1540000" />
       <workItem from="1563230197628" duration="2103000" />
       <workItem from="1567900629583" duration="21000" />
-      <workItem from="1567902465403" duration="2953000" />
+      <workItem from="1567902465403" duration="2987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23775000" />
+    <option name="totallyTimeSpent" value="23809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="830" extended-state="6" />
@@ -560,7 +560,7 @@
     <entry file="file://$PROJECT_DIR$/test_ard.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
