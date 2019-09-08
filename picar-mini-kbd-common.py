@@ -92,6 +92,8 @@ if args.fpvvideo:
     fpv_video = True
 if args.guide:
     guided = True
+else:
+    guided = False
 if args.video:
     view_video = True
 
