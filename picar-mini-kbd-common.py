@@ -119,7 +119,7 @@ if use_dnn == True:
     print ("Load Keras")
     import keras
     print ("Load Model")
-    model = keras.models.load_model("models/model_10.h5")
+    model = keras.models.load_model("model_12.h5")
     print ("Done..")
 
 # null_frame = np.zeros((cfg_cam_res[0],cfg_cam_res[1],3), np.uint8)
