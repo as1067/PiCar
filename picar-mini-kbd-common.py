@@ -166,20 +166,23 @@ while True:
 
     if use_dnn == True:
         # 1. machine input
-        image = frame
-        image = cv2.resize(image, (80, 60))
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        image = np.expand_dims(image, 2)
-        image = auto_canny(image)
-        image = np.true_divide(image, 255)
-        image = np.expand_dims(image, 2)
-        image = np.asarray(image)
-        angles = model.predict(image,batch_size=1,verbose=1)
-        angle = int(angles[0]*200)
-        if angle>120 and angle<130:
-            actuator.center()
+        if frame is not None:
+            image = frame
+            image = cv2.resize(image, (80, 60))
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            image = np.expand_dims(image, 2)
+            image = auto_canny(image)
+            image = np.true_divide(image, 255)
+            image = np.expand_dims(image, 2)
+            image = np.asarray(image)
+            angles = model.predict(image,batch_size=1,verbose=1)
+            angle = int(angles[0]*200)
+            if angle>120 and angle<130:
+                actuator.center()
+            else:
+                actuator.set_angle(angle)
         else:
-            actuator.set_angle(angle)
+            actuator.center()
         actuator.set_speed(110)
 
     dur = time.time() - ts
