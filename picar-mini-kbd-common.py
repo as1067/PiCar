@@ -172,7 +172,7 @@ while True:
         image.append(frame)
         image = np.asarray(image)
         angles = model.predict(image,batch_size=1,verbose=1)
-        angle = int(angles[0])
+        angle = int(angles[0]*200)
         if angle>120 and angle<130:
             actuator.center()
         else:
