@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_ard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ard.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ard.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -347,12 +346,12 @@
       <workItem from="1562641945395" duration="1540000" />
       <workItem from="1563230197628" duration="2103000" />
       <workItem from="1567900629583" duration="21000" />
-      <workItem from="1567902465403" duration="2713000" />
+      <workItem from="1567902465403" duration="2752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23535000" />
+    <option name="totallyTimeSpent" value="23574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="830" extended-state="6" />
