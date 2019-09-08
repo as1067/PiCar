@@ -166,12 +166,13 @@ while True:
 
     if use_dnn == True:
         # 1. machine input
-        frame = cv2.resize(frame, (80, 60))
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        frame = np.expand_dims(frame, 2)
-        frame = auto_canny(frame)
-        image = []
-        image.append(frame)
+        image = frame
+        image = cv2.resize(image, (80, 60))
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        image = np.expand_dims(image, 2)
+        image = auto_canny(image)
+        image = np.true_divide(image, 255)
+        image = np.expand_dims(image, 2)
         image = np.asarray(image)
         angles = model.predict(image,batch_size=1,verbose=1)
         angle = int(angles[0]*200)
