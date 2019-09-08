@@ -6,7 +6,6 @@ throt = "t100\n"
 s.write(throt.encode("utf-8"))
 steer = "s60\n"
 s.write(steer.encode("utf-8"))
-sleep(1)
 throt = "t100\n"
 s.write(throt.encode("utf-8"))
 steer = "s200\n"
