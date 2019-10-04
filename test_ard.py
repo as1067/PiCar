@@ -1,6 +1,6 @@
 from serial import Serial
 from time import sleep
-s = Serial('/dev/ttyUSB0', 9600, timeout=10)
+s = Serial('/dev/serial0', 9600, timeout=10)
 s.rtscts = True
 throt = "t120\n"
 s.write(throt.encode("utf-8"))
