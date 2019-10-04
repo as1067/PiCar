@@ -2,6 +2,7 @@ from serial import Serial
 from time import sleep
 s = Serial('/dev/ttyUSB0', 9600, timeout=10)
 # sleep(10)
+s.flush()
 print("Finished")
 s.rtscts = True
 throt = "t100\n"
