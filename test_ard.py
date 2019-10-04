@@ -6,4 +6,5 @@ throt = "t100\n"
 s.write(throt.encode("utf-8"))
 steer = "s200\n"
 s.write(steer.encode("utf-8"))
+s.flush()
 s.close()
