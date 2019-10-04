@@ -1,11 +1,12 @@
 from serial import Serial
 from time import sleep
-s = Serial('/dev/serial0', 9600, timeout=10)
-s.rtscts = True
+s = Serial('/dev/ttyUSB0', 9600, timeout=10)
 sleep(10)
+s.rtscts = True
 throt = "t120\n"
 s.write(throt.encode("utf-8"))
 sleep(3)
 steer = "s200\n"
-sleep(3)
 s.write(steer.encode("utf-8"))
+sleep(3)
+s.close()
