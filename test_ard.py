@@ -12,5 +12,6 @@ s.write(throt.encode("utf-8"))
 steer = "s200\n"
 print("write")
 s.write(steer.encode("utf-8"))
+s.send_break(1)
 # sleep(3)
 s.close()
