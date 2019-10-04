@@ -4,7 +4,7 @@ s = Serial('/dev/ttyUSB0', 9600, timeout=10)
 sleep(10)
 print("Finished")
 s.rtscts = True
-throt = "t120\n"
+throt = "t160\n"
 print("write")
 s.write(throt.encode("utf-8"))
 sleep(3)
