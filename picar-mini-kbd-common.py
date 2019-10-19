@@ -177,7 +177,7 @@ while True:
             image = np.asarray(image)
             angles = model.predict([[image]],batch_size=1,verbose=1)
             angle = int(angles[0]*200)
-            angle = angle/250*180
+            angle = angle/250*18
             if angle>8 and angle<10:
                 actuator.center()
             else:
