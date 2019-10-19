@@ -11,8 +11,8 @@ cur_speed = 0
 angle = 0
 
 def init(default_speed=12):
-    throttle.start(12)
-    steer.start(5)
+    throttle.start(15)
+    steer.start(9)
 def set_speed(speed):
     cur_speed = speed
     throttle.ChangeDutyCycle(speed)
