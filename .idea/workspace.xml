@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/picar-mini-kbd-common.py" beforeDir="false" afterPath="$PROJECT_DIR$/picar-mini-kbd-common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_pi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -85,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+            <state relative-caret-position="220">
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="21" />
               <folding>
                 <element signature="e#18#27#0" expanded="true" />
               </folding>
@@ -95,10 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supervisedDriving.py">
+        <entry file="file://$PROJECT_DIR$/camerapicamera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="375">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -127,6 +126,7 @@
       <find>driver</find>
       <find>actuator</find>
       <find>actuator.se</find>
+      <find>camera.re</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -359,12 +359,12 @@
       <workItem from="1563230197628" duration="2103000" />
       <workItem from="1567900629583" duration="21000" />
       <workItem from="1567902465403" duration="4724000" />
-      <workItem from="1571512552350" duration="1962000" />
+      <workItem from="1571512552350" duration="2245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28472000" />
+    <option name="totallyTimeSpent" value="28755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
@@ -417,13 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-802">
           <caret line="2" column="2" selection-start-line="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camerapicamera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -566,22 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actuator_pi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actuator-null.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actuator-drv8835.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_ard.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -594,18 +571,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/picar-mini-kbd-common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+        <state relative-caret-position="220">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="21" />
           <folding>
             <element signature="e#18#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/camerapicamera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actuator-null.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actuator-drv8835.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actuator_pi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_pi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
