@@ -179,8 +179,11 @@ while True:
             angle = int(angles[0]*200)
             if angle>120 and angle<130:
                 actuator.center()
-            else:
+            elif angle<120:
+                angle = angle/24
                 actuator.set_angle(angle)
+            else:
+                angle = 5 + (angle-130)/24
         else:
             actuator.center()
         actuator.set_speed(110)

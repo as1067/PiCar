@@ -15,7 +15,7 @@ camera="camerapicamera"
 #   "actuator-drv8835", "actuator-adafruit_hat"
 #   "actuator-null"
 ##########################################################
-actuator="actuator-arduino"
+actuator="actuator_pi"
 
 ##########################################################
 # model selection
