@@ -164,7 +164,7 @@ while True:
         else:
             use_dnn = False
 
-    if use_dnn == True:
+    if use_dnn == True:      
         # 1. machine input
         if frame is not None:
             image = frame
