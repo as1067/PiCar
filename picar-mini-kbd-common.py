@@ -186,7 +186,7 @@ while True:
                 angle = 5 + (angle-130)/24
         else:
             actuator.center()
-        actuator.set_speed(110)
+        actuator.set_speed(12)
 
     dur = time.time() - ts
     if dur > period:
