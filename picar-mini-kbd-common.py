@@ -183,6 +183,7 @@ while True:
             else:
                 actuator.set_angle(angle)
             print(angle)
+            actuator.set_speed(12)
 
     dur = time.time() - ts
     if dur > period:
