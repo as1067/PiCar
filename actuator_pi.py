@@ -24,6 +24,9 @@ def get_speed():
 def get_angle():
     return angle
 
+def stop():
+    throttle.ChangeDutyCycle(15)
+
 
 # steering
 def center():
