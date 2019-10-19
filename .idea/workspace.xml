@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/actuator_pi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/params.py" beforeDir="false" afterPath="$PROJECT_DIR$/params.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picar-mini-kbd-common.py" beforeDir="false" afterPath="$PROJECT_DIR$/picar-mini-kbd-common.py" afterDir="false" />
-    </list>
+    <list default="true" id="a220b8e4-35b3-438a-9290-7ec3f832944c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,12 +356,12 @@
       <workItem from="1563230197628" duration="2103000" />
       <workItem from="1567900629583" duration="21000" />
       <workItem from="1567902465403" duration="4724000" />
-      <workItem from="1571512552350" duration="827000" />
+      <workItem from="1571512552350" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27337000" />
+    <option name="totallyTimeSpent" value="27547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
