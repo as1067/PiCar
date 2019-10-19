@@ -8,10 +8,9 @@ p = GPIO.PWM(40, 50)     # Sets up pin 11 as a PWM pin
 p.start(0)               # Starts running PWM on the pin and sets it to 0
 
 # Move the servo back and forth
-p.ChangeDutyCycle(3)     # Changes the pulse width to 3 (so moves the servo)
-sleep(1)                 # Wait 1 second
-p.ChangeDutyCycle(12)    # Changes the pulse width to 12 (so moves the servo)
-sleep(1)
+for i in range(100):
+    p.ChangeDutyCycle(i)
+    sleep(1)
 
 # Clean up everything
 p.stop()                 # At the end of the program, stop the PWM
