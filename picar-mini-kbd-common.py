@@ -121,7 +121,7 @@ if use_dnn == True:
     print ("Load Keras")
     import keras
     print ("Load Model")
-    model = keras.models.load_model("model_12.h5")
+    model = keras.models.load_model("model_13.h5")
     print ("Done..")
 
 # null_frame = np.zeros((cfg_cam_res[0],cfg_cam_res[1],3), np.uint8)
@@ -168,6 +168,7 @@ while True:
         # 1. machine input
         if frame is not None:
             image = frame
+            image = cv2.GaussianBlur(image, (5, 5), cv2.BORDER_DEFAULT)
             image = cv2.resize(image, (80, 60))
             image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             image = np.expand_dims(image, 2)
@@ -176,12 +177,8 @@ while True:
             image = np.expand_dims(image, 2)
             image = np.asarray(image)
             angles = model.predict([[image]],batch_size=1,verbose=1)
-            angle = int(angles[0]*200)
-            angle = angle/250*18
-            if angle>8 and angle<10:
-                actuator.center()
-            else:
-                actuator.set_angle(angle)
+            angle = angles[0]*10
+            actuator.set_angle(angle)
             print(angle)
             actuator.set_speed(12)
 
