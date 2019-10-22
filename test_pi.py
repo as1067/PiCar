@@ -12,7 +12,7 @@ p.start(12)
 # Move the servo back and forth
 for i in range(20):
     print(i)
-    q.ChangeDutyCycle(i)
+    # q.ChangeDutyCycle(i)
     p.ChangeDutyCycle(i)
     sleep(1)
 
