@@ -178,7 +178,7 @@ while True:
             image = np.expand_dims(image, 2)
             image = np.asarray(image)
             angles = model.predict([[image]],batch_size=1,verbose=1)
-            angle = angles[0]*6+6
+            angle = angles[0]*6+5
             actuator.set_angle(angle)
             print(angle)
 
