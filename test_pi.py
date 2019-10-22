@@ -19,7 +19,7 @@ for i in range(200):
     #p.ChangeDutyCycle(i)
     steer.write(bytes(str(i)+"\n","utf-8"))
     sleep(.1)
-    serial.close()
+    steer.close()
 
 # Clean up everything
 p.stop()                 # At the end of the program, stop the PWM
