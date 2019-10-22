@@ -9,12 +9,15 @@ GPIO.setup(12,GPIO.OUT)
 q = GPIO.PWM(12,50)
 q.start(0)               # Starts running PWM on the pin and sets it to 0
 p.start(0)
+steer = Serial('/dev/ttyUSB0', 9600, timeout=1)
+
 # Move the servo back and forth
-for i in range(20):
+for i in range(200):
     print(i)
     # q.ChangeDutyCycle(i)
-    p.ChangeDutyCycle(i)
-    sleep(1)
+    #p.ChangeDutyCycle(i)
+    steer.write(bytes(i)+"\n","utf-8"))
+    sleep(.1)
 
 # Clean up everything
 p.stop()                 # At the end of the program, stop the PWM
