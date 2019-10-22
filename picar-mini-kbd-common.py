@@ -130,7 +130,7 @@ camera.start()
 time.sleep(2)
 g = g_tick()
 start_ts = time.time()
-actuator.set_speed(10)
+actuator.set_speed(8)
 frame_arr = []
 angle_arr = []
 # enter main loop
