@@ -13,7 +13,7 @@ p.start(0)
 for i in range(20):
     print(i)
     # q.ChangeDutyCycle(i)
-    p.ChangeDutyCycle(i)
+    q.ChangeDutyCycle(i)
     sleep(1)
 
 # Clean up everything
