@@ -16,7 +16,7 @@ for i in range(200):
     print(i)
     # q.ChangeDutyCycle(i)
     #p.ChangeDutyCycle(i)
-    steer.write(bytes(i)+"\n","utf-8"))
+    steer.write(bytes(str(i)+"\n","utf-8"))
     sleep(.1)
 
 # Clean up everything
